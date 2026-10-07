@@ -1,0 +1,121 @@
+
+// ---------- 10 let variables ----------
+let studentName = "Reann";
+let age = 20;
+let currentSubject = "JavaScript";
+let score = 95;
+let isActive = true;
+let assignmentCount = 3;
+let averageGrade = 88;
+let feedback = "";
+let totalPoints = 0;
+let completedTasks = 0;
+
+// ---------- 10 const variables ----------
+const SCHOOL = "Mini-LMS University";
+const SECTION = "BSCS3C";
+const PASSING_SCORE = 75;
+const MAX_SCORE = 100;
+const MIN_SCORE = 0;
+const CREDIT_UNITS = 3;
+const SUBMISSION_DATE = "2026-10-07";
+const PROFESSOR = "Instructor";
+const COURSE_CODE = "CS101";
+const GRADE_SCALE = "Letter";
+
+// ---------- 5 arrow functions ----------
+const greet = () => Hello, ${studentName}! Welcome to ${SCHOOL};
+const calculateBonus = (points) => points + 5;
+const checkPassing = (score) => score >= PASSING_SCORE;
+const getFullName = (first, last) => ${last}, ${first};
+const multiply = (a, b) => a * b;
+
+// ---------- 3 Destructured Arrays ----------
+const scores = [90, 85, 92, 88, 95];
+const [math, science, english, history, pe] = scores;
+
+const fruits = ["Apple", "Banana", "Mango"];
+const [fruit1, fruit2, fruit3] = fruits;
+
+const coordinates = [12.5, 14.6, 10.0];
+const [x, y, z] = coordinates;
+
+// ---------- 3 Destructured Objects ----------
+const student = { first: "Reann", last: "Diomangay", id: "BSCS3C-021" };
+const { first, last, id } = student;
+
+const course = { name: "JS Essentials", code: "CS101", units: 3 };
+const { name: courseName, code: courseCode, units } = course;
+
+const book = { title: "JS Guide", author: "Dev Team", pages: 150 };
+const { title, author, pages: totalPages } = book;
+
+// ---------- 2 Arrays using Spread Operator ----------
+const basicSubjects = ["Math", "Science", "English"];
+const majorSubjects = ["React Native", "Node.js", "Database"];
+const allSubjects = [...basicSubjects, ...majorSubjects];
+
+const evenNumbers = [2, 4, 6];
+const oddNumbers = [1, 3, 5];
+const combinedNumbers = [...oddNumbers, ...evenNumbers];
+
+// ---------- 2 Objects using Spread Operator ----------
+const personalInfo = { first: "Reann", last: "Diomangay" };
+const academicInfo = { course: "CS", section: "BSCS3C" };
+const fullProfile = { ...personalInfo, ...academicInfo };
+
+const defaults = { theme: "light", notifications: true };
+const userPrefs = { notifications: false };
+const settings = { ...defaults, ...userPrefs };
+
+// ---------- 2 Arrays using .map() ----------
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+
+const names = ["Ana", "Ben", "Carl"];
+const greetings = names.map(name => Hi, ${name}!);
+
+// ---------- 2 Arrays using .filter() ----------
+const allScores = [85, 92, 60, 98, 72, 55];
+const passingScores = allScores.filter(s => s >= PASSING_SCORE);
+
+const ages = [12, 18, 22, 15, 30, 17];
+const adults = ages.filter(a => a >= 18);
+
+// ---------- 2 Objects with Optional Chaining ----------
+const userData = { profile: { address: { city: "Manila" } } };
+const cityName = userData?.profile?.address?.city;
+const zipCode = userData?.profile?.address?.zip ?? "Not provided";
+
+const assignment = { submitted: true, grade: 90 };
+const gradeValue = assignment?.grade;
+const feedbackText = assignment?.feedback ?? "No feedback yet";
+
+// ---------- 10 Template Literals ----------
+const msg1 = Student: ${first} ${last};
+const msg2 = Section: ${SECTION};
+const msg3 = Course: ${courseName} (${courseCode});
+const msg4 = Score: ${score}/${MAX_SCORE};
+const msg5 = Status: ${checkPassing(score) ? "PASSED" : "FAILED"};
+const msg6 = Math: ${math}, Science: ${science};
+const msg7 = Total Subjects: ${allSubjects.length};
+const msg8 = City: ${cityName};
+const msg9 = Doubled: ${doubled.join(", ")};
+const msg10 = Submitted: ${SUBMISSION_DATE};
+
+// ---------- Output ----------
+console.log("=== ACTIVITY 1.3 OUTPUT ===");
+console.log(msg1);
+console.log(msg2);
+console.log(msg3);
+console.log(msg4);
+console.log(msg5);
+console.log(msg6);
+console.log(msg7);
+console.log(msg8);
+console.log(msg9);
+console.log(msg10);
+console.log(greet());
+console.log("Passing Scores:", passingScores);
+console.log("Adults:", adults);
+console.log("Full Profile:", fullProfile);
